@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-    <img src="images/uclid.jpg" alt="Logo" width="100%">
+    <img src="images/uclid.jpg" alt="Logo" width="25%">
     <h1 align="center">Micropython CLI Datagram</h1>
   <h3 align="center">Simple Datagram Communication.</h3>
   <h2 align="center">Snags IP Addresses automatically if possible</h2>
@@ -45,7 +45,7 @@ Simply put: copy uclid.py onto the micropython board.
 ## Usage
 
 ```python
-import ugit
+import uclid
 
 uclid.wificonnect('ssid','password') # connects to wifi
 uclid.wap('ssid','password') # Creates Wireless Access Point
