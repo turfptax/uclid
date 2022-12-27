@@ -1,4 +1,4 @@
-# Simple urepl like module
+# Simple repl like UDP CLI module
 # takes care of connecting to wifi or creating your own
 # written for the Rapsberry Pi Pico W
 # requires the frint dependancy to allow for print over udp
