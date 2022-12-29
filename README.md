@@ -40,6 +40,48 @@ uclid.send('Totally got your message!')
 uclid.start()
 # Starts loop that waits for data and tries to run it via uclid.frint()
 ```
+
+### Main Functions
+```python
+# Source Code
+
+# Start function ends only when end_session = True
+def start():
+    gc.collect()
+    end_session = False
+    while not end_session:
+        reply = receive()
+        try:
+            frint(exec(reply))
+        except:
+            frint(str(reply))
+        send(bytes(str(frint.getbuff()),'utf-8'))
+        if reply == b'stop':
+            end_session = True
+            
+# Main recursive print like function
+# Easiest way to mimic STDOUT
+def frint(data):
+    global ram
+    global cur
+    if type(data) is type(None):
+        if cur != 0:
+            return printram(0-cur)
+    elif type(data) == str:
+        ram.append(data)
+        cur += 1
+        return ram[-1]
+    elif type(data) == list:
+        for i in data:
+            frint(i)
+        return printram(0-cur)
+    elif type(data) == int or type(data) == bool or type(data) == float:
+        ram.append(str(data))
+        cur += 1
+        return ram[-1]```
+
+
+
 ### Installation
 
 Simply put: copy uclid.py onto the micropython board.
