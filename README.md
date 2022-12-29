@@ -28,9 +28,17 @@ import uclid
 
 uclid.wificonnect('SSID','PASSWORD')
 
+# One way communication
+
+# Receive Data
 data = uclid.receive()
+
+# Send Data
 uclid.send('Totally got your message!')
 
+# Continuous Communication 'CLI' or 'REPL' like loop.
+uclid.start()
+# Starts loop that waits for data and tries to run it via uclid.frint()
 ```
 ### Installation
 
