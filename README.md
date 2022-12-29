@@ -78,7 +78,9 @@ def frint(data):
     elif type(data) == int or type(data) == bool or type(data) == float:
         ram.append(str(data))
         cur += 1
-        return ram[-1]```
+        return ram[-1]
+        
+```
 
 
 
